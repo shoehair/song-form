@@ -2,9 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* Align items at the start */
-  background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+.main-container {
+  background-color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
 }
 
 .song-item {

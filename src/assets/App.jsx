@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SongDisplay from "./SongDisplay.jsx";
-import { data } from "../data/data.js";
+import { data } from "./data/data.js";
 
 export default function App() {
   const [randomSample, setRandomSample] = useState([]);
@@ -10,7 +10,7 @@ export default function App() {
     "wait...",
     -1,
     -1,
-    "wait..."
+    -1,
   ]);
   const [preferences, setPreferences] = useState({});
 
@@ -46,7 +46,7 @@ export default function App() {
         randomSample[i + 1]["lyre_response"],
         randomSample[i + 1]["id"],
         i + 1,
-        randomSample[i + 1]["artist"],
+        randomSample[i + 1]["prompt"],
       ]);
     } else {
       setDone(true);
@@ -65,7 +65,7 @@ export default function App() {
       sampledSongs[0]["lyre_response"],
       sampledSongs[0]["id"],
       0,
-      sampledSongs[0]["artist"],
+      sampledSongs[0]["prompt"],
     ]);
   }, []);
 
@@ -77,7 +77,7 @@ export default function App() {
           songOne={currSongs[0]}
           songTwo={currSongs[1]}
           handlePreference={handlePreference}
-          artist={currSongs[4]}
+          prompt={currSongs[3]}
         />
       ) : (
         <div>Thanks for helping us advance the future of LLM's.</div>

@@ -6,17 +6,21 @@ export default function SongDisplay({
   songOne,
   songTwo,
   handlePreference,
-  prompt,
-}) {
+  artist,
+})
+{
+  let arrow = "<=";
   return (
+    <>
+    <div className="main-container"> Both songwriters were asked to write a song in the style of {artist}. </div>
     <div className="song-display-container">
-      <div>{prompt}</div>
       <div className="song-item">{songOne}</div>
       <button onClick={handlePreference(index, "llama")}>
-        Prefer Song One
+        {arrow}Prefer Song One
       </button>
       <div className="song-item">{songTwo}</div>
-      <button onClick={handlePreference(index, "lyre")}>Prefer Song Two</button>
+      <button onClick={handlePreference(index, "lyre")}> {arrow} Prefer Song Two</button>
     </div>
+  </>
   );
 }
