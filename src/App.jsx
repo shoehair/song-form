@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SongDisplay from "./SongDisplay.jsx";
-import { data } from "./data/data.js";
+import { data } from "../data/data.js";
 
 export default function App() {
   const [randomSample, setRandomSample] = useState([]);
