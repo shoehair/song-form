@@ -26,17 +26,17 @@ export default function SongDisplay({
   if (randomNumber < 0.5) {
     songDiv = <div className="song-display-container">
     <div className="song-item">{songTwo}</div>
-    <button onClick={handlePreference(index, "lyre")}> {arrow} Prefer Song Two</button>
+    <button onClick={handlePreference(index, "lyre")}> {arrow} Prefer Song One</button>
     <div className="song-item">{songOne}</div>
     <button onClick={handlePreference(index, "llama")}>
-      {arrow}Prefer Song One
+      {arrow}Prefer Song Two
     </button>
   </div>
   }
 
   return (
     <>
-    <div className="main-container"> Both songwriters were asked to write a song in da style of {artist}. </div>
+    <div className="main-container"> Both songwriters were asked to write a song in the style of {artist}. </div>
     {songDiv}
   </>
   );
